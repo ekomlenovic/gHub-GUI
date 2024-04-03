@@ -275,7 +275,7 @@ int main(void) {
 	available_head = (Item*)malloc(size_of_Item);
 	available_head->next = NULL;
 
-	// check unsupported devices
+	// check unsupported devices and exit if found
 	returnCode = unsupportedDevice(unsuported);
 	if (returnCode == EXIT_FAILURE){
 		deleteLinkedList(&head);
